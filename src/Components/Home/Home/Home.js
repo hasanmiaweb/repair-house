@@ -1,9 +1,12 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
+import HeroSection from '../HeroSection/HeroSection';
 
 const Home = () => {
     return (
         <div>
-           <h1>Hello</h1>
+            <HeroSection></HeroSection>
+            <Footer></Footer>
         </div>
     );
 };
