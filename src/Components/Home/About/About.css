@@ -1,0 +1,15 @@
+button.aboutReadMore {
+  background: #003561;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+}
+.section-title h1 {
+  color: #003561;
+  font-weight: 900;
+}
+.about_content h1 {
+  font-family: monospace;
+}

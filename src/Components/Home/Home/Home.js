@@ -1,12 +1,15 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
+import About from '../About/About';
 import HeroSection from '../HeroSection/HeroSection';
+import Services from '../Services/Services';
+import './Home.css';
 
 const Home = () => {
     return (
         <div>
             <HeroSection></HeroSection>
-            <Footer></Footer>
+            <About></About>
+            <Services></Services>
         </div>
     );
 };

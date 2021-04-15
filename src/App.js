@@ -3,13 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import About from './Components/Home/About/About';
 import Contact from './Components/Home/Contact/Contact';
+import Footer from './Components/Home/Footer/Footer';
 import Home from "./Components/Home/Home/Home";
 import MainNavbar from './Components/Home/Navbar/MainNavbar';
 import Services from './Components/Home/Services/Services';
 import Team from './Components/Home/Team/Team';
+import Topbar from './Components/Home/Topbar/Topbar';
 function App() {
   return (
     <Router>
+      <Topbar></Topbar>
       <MainNavbar></MainNavbar>
       <Switch>
         <Route exact path="/">
@@ -28,6 +31,7 @@ function App() {
           <Contact></Contact>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
   );
 }
