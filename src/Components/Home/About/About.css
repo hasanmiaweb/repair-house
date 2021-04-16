@@ -13,3 +13,6 @@ button.aboutReadMore {
 .about_content h1 {
   font-family: monospace;
 }
+.aboutSection {
+  margin: 50px 0px;
+}

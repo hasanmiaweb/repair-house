@@ -9,6 +9,7 @@ import MainNavbar from './Components/Home/Navbar/MainNavbar';
 import Services from './Components/Home/Services/Services';
 import Team from './Components/Home/Team/Team';
 import Topbar from './Components/Home/Topbar/Topbar';
+import Login from './Components/Login/Login';
 function App() {
   return (
     <Router>
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact></Contact>
+        </Route>
+        <Route path="/login">
+          <Login></Login>
         </Route>
       </Switch>
       <Footer></Footer>

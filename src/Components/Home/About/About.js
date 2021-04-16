@@ -4,7 +4,8 @@ import "./About.css";
 const About = () => {
   return (
     <div className="container mt-5 mb-5">
-      <div className="section-title">
+<div className="aboutSection">
+<div className="section-title">
         <h1>About US</h1> <br />
       </div>
       <div className="row">
@@ -29,6 +30,7 @@ const About = () => {
           <img src={aboutRightimage} className="img-fluid" alt="" />
         </div>
       </div>
+</div>
     </div>
   );
 };

@@ -17,5 +17,17 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(197, 26, 4);
+  background: rgb(110, 4, 197);
+}
+
+/***Responsive**/
+
+@media only screen and (max-width: 425px) {
+  .topbarRight {
+    float: none !important;
+    text-align: center;
+  }
+  .topbarleft {
+    display: none;
+  }
 }
