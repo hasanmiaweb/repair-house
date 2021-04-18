@@ -1,21 +1,25 @@
-import React from 'react';
-import About from '../About/About';
-import Contact from '../Contact/Contact';
-import ExtraBenefit from '../ExtraBenefit/ExtraBenefit';
-import HeroSection from '../HeroSection/HeroSection';
-import Services from '../Services/Services';
-import './Home.css';
+import React from "react";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
+import ExtraBenefit from "../ExtraBenefit/ExtraBenefit";
+import Footer from "../Footer/Footer";
+import HeroSection from "../HeroSection/HeroSection";
+import Services from "../Services/Services";
+import Team from "../Team/Team";
+import "./Home.css";
 
 const Home = () => {
-    return (
-        <div>
-            <HeroSection></HeroSection>
-            <ExtraBenefit></ExtraBenefit>
-            <About></About>
-            <Services></Services>
-            <Contact></Contact>
-        </div>
-    );
+  return (
+    <div>
+      <HeroSection></HeroSection>
+      <ExtraBenefit></ExtraBenefit>
+      <About></About>
+      <Services></Services>
+      <Team></Team>
+      <Contact></Contact>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default Home;
