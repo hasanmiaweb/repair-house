@@ -26,7 +26,7 @@ function AddServices() {
   };
   const handleImage = (e) => {
     const imageData = new FormData();
-    imageData.set("key", "9874c6604e213e7efec75a0aadac6f74");
+    imageData.set("key", "39bbd96e90b82af25ff8eb5651f7e54d");
     imageData.append("image", e.target.files[0]);
     axios.post(`https://api.imgbb.com/1/upload`, imageData).then((result) => {
       setImage(result.data.data.display_url);
@@ -34,25 +34,24 @@ function AddServices() {
   };
 
   const handleSubmit = (e) => {
-    console.log(values);
-    e.preventDefault();
     formClear();
-    const fieldData = { ...values };
-    fieldData.imageUrl = image;
-    fetch(`http://localhost:5000/item`, {
+    const inputData = { ...values };
+    inputData.imageUrl = image;
+    fetch(`https://repair-house.herokuapp.com/item`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(fieldData),
+      body: JSON.stringify(inputData),
     })
       .then((result) => {
         console.log(result);
-        setMessage("Product Insert Successfully !");
+        setMessage("Service added Successfully !");
       })
       .catch((err) => {
         console.log(err);
       });
+      e.preventDefault();
   };
 
   return (
@@ -60,11 +59,13 @@ function AddServices() {
       <Container>
         <Row>
           <Col>
+          <br/>
             <Box>
               <Typography variant="h4">Add Service</Typography>
             </Box>
           </Col>
         </Row>
+        <br/>
         <div className="addServicesField">
           {message && (
             <h6 class="alert alert-success" role="alert">
@@ -99,8 +100,22 @@ function AddServices() {
               </Col>
             </Row>
             <Row>
+            <Col>
+              <br/>
+                <label htmlFor="description">Description</label>
+                <textarea
+                  name="description"
+                  placeholder="Write Description"
+                  className="form-control input"
+                  value={values.description}
+                  onChange={handleChange}
+                  cols="25"
+                  rows="5"
+                ></textarea>
+              </Col>
               <Col>
-              <label htmlFor="servicesTitle">Service Title</label>
+              <br/>
+              <label htmlFor="servicesTitle">Service Price</label>
                 <input
                   type="number"
                   className="form-control input"
@@ -112,24 +127,17 @@ function AddServices() {
                   required
                 />
               </Col>
+
             </Row>
             <Row>
-              <Col>
-                <label htmlFor="description">Description</label>
-                <textarea
-                  name="description"
-                  placeholder="Write Description"
-                  className="form-control input"
-                  value={values.description}
-                  onChange={handleChange}
-                  cols="30"
-                  rows="5"
-                ></textarea>
-              </Col>
+  
             </Row>
             <Row>
-              <Col md={2}>
-                <Button type="submit" variant="contained" className="Button">
+           
+              <Col md={12}>
+              <br/>
+
+                <Button type="submit" id="addservice" className="Button form-control">
                   Submit
                 </Button>
               </Col>

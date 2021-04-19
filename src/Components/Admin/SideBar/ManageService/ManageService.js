@@ -1,22 +1,21 @@
 import { Box, Button, Typography } from "@material-ui/core";
-import { Delete, Edit } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { RiDeleteBin6Fill } from 'react-icons/ri';
 import TextTruncate from "react-text-truncate";
 import "./ManageService.css";
 function ManageService() {
   const [dbData, setDbData] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/item`)
+    fetch(`https://repair-house.herokuapp.com/item`)
       .then((res) => res.json())
       .then((data) => setDbData(data));
   }, []);
-  const handleEdit = (id) => {};
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/item/${id}`, {
+    fetch(`https://repair-house.herokuapp.com/item/${id}`, {
       method: "DELETE",
     }).then(() => {
-      fetch(`http://localhost:5000/item`)
+      fetch(`https://repair-house.herokuapp.com/item`)
         .then((res) => res.json())
         .then((data) => setDbData(data));
     });
@@ -26,11 +25,13 @@ function ManageService() {
       <Container>
         <Row>
           <Col>
+          <br/>
             <Box>
               <Typography variant="h4">Manage Service</Typography>
             </Box>
           </Col>
         </Row>
+        <br/>
         <div className="OrderList">
           <Row>
             <Col>
@@ -42,11 +43,6 @@ function ManageService() {
                   <th>Price</th>
                   <th>Action</th>
                 </tr>
-                {/* <div className="d-flex justify-content-center w-100">
-                  <span>
-                    {dbData.length === 0 && <img src={spinner} alt="" />}
-                  </span>
-                </div> */}
                 {dbData.map((data) => (
                   <tr>
                     <td>{data.title}</td>
@@ -73,14 +69,11 @@ function ManageService() {
                     </td>
                     <td>${data.price}</td>
                     <td>
-                      <Button onClick={handleEdit} color="primary">
-                        <Edit />
-                      </Button>
                       <Button
                         onClick={() => handleDelete(data._id)}
                         color="secondary"
                       >
-                        <Delete />
+                        <RiDeleteBin6Fill/>
                       </Button>
                     </td>
                   </tr>

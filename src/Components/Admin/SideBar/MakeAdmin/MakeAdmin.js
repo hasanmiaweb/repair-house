@@ -37,7 +37,7 @@ function MakeAdmin() {
     formClear();
     const fieldData = { ...values };
     fieldData.imageUrl = image;
-    fetch(`https://blueberry-cobbler-59605.herokuapp.com/products`, {
+    fetch(``, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -58,17 +58,14 @@ function MakeAdmin() {
       <Container>
         <Row>
           <Col>
+          <br/>
             <Box>
               <Typography variant="h4">Make Admin</Typography>
             </Box>
           </Col>
         </Row>
+        <br/>
         <div className="adminField">
-          {message && (
-            <h6 class="alert alert-success" role="alert">
-              {message}
-            </h6>
-          )}
           <form action="/createProduct" onSubmit={handleSubmit} method="post">
             <Row>
               <Col md={10}>
@@ -79,8 +76,7 @@ function MakeAdmin() {
                   name="email"
                   value={values.product}
                   onChange={handleChange}
-                  autoComplete="off"
-                  placeholder="Admin Email..."
+                  placeholder="Email"
                   required
                 />
               </Col>

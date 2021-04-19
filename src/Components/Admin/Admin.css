@@ -39,21 +39,61 @@
   color: aliceblue;
 }
 .sidebar-right {
-  width: 75%;
+  width: 80%;
   float: right;
 }
-.orderlistwrap.mt-5 {
-  background: #f9f9f9;
-  padding: 50px 0;
+button#addservice {
+  background: #003561;
+  color: white;
+  font-size: 18px;
 }
-input[type="text"] {
-  padding: 14px;
-  border: 2px solid #ddd;
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.Buttons {
+  margin-top: 30px !important;
 }
-textarea {
-  overflow: auto;
-  resize: vertical;
-  border: none;
+#image::before {
+  content: "Upload Photo";
+  color: white;
+  display: inline-block;
+  border-radius: 3px;
+  position: absolute;
+  top: 42px;
+  left: 16px;
+  padding: 7px 11px;
+  outline: none;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  background: #003561;
+  margin: -9px 0px;
+}
+.OrderList {
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
   padding: 20px;
-  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+.MuiButton-root {
+  min-width: 30px !important;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td:nth-child(2) {
+  text-align: left;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 8px;
+  border: none;
+}
+tr:nth-child(1) {
+  background-color: #c3c3c326;
+  text-align: center;
 }

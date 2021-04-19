@@ -1,7 +1,6 @@
 import React from "react";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { BiBorderAll, BiUserPlus } from "react-icons/bi";
-import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../Admin.css";
 const Sidebar = () => {
@@ -9,15 +8,6 @@ const Sidebar = () => {
     <div>
       <div className="sidebar">
         <ul>
-          <Link to="/admin/orderlist">
-            {" "}
-            <li>
-              <div className="sidebarIcons">
-                <FaShoppingCart />
-              </div>
-              Order List
-            </li>
-          </Link>
           <Link to="/admin/addservice">
             <li>
               <div className="sidebarIcons">
