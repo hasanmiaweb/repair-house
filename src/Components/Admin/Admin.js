@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import "./Admin.css";
-import AddService from "./SideBar/AddService";
-import MakeAdmin from "./SideBar/MakeAdmin";
-import OrderList from "./SideBar/OrderList";
+import AddServices from "./SideBar/AddServices/AddServices";
+import MakeAdmin from "./SideBar/MakeAdmin/MakeAdmin";
+import OrderList from "./SideBar/OrderList/OrderList";
 import Sidebar from "./SideBar/Sidebar";
 const Admin = () => {
   return (
@@ -23,7 +23,7 @@ const Admin = () => {
               <OrderList></OrderList>
             </PrivateRoute>
             <PrivateRoute exact path="/admin/addservice">
-              <AddService></AddService>
+              <AddServices></AddServices>
             </PrivateRoute>
             <PrivateRoute exact path="/admin/makeadmin">
               <MakeAdmin></MakeAdmin>
